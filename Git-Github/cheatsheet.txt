@@ -1,0 +1,81 @@
+Cheatsheet git y github
+----------------------------------
+git help - comando para mostrar ayuda de git
+
+git config --global user.name "nombre de usuario" - configura para siempre el nombre de usuario
+git config --global user.email email@email.com - configura para siempre el email
+
+Para eliminar el usuario y mail seteados:
+git config --global --unset user.name "nombre de usuario" - elimina el usuario
+git config --global --unset user.email email@email.com - elimina el mail
+
+Para crear un repositorio:
+git init
+
+Para verificar el estado de los archivos del repositorio
+git status
+
+Para añadir un archivo especifico al repositorio:
+git add "nombre archivo"
+Para añadir todos los archivos:
+git add .
+
+Para commitear un archivo:
+git commit nombre_archivo -m "mensaje del commit"
+
+git commit --amend -m "Mi nuevo mensaje" (cambia los mensajes del commit)
+
+Para remover los archivos del repositorio:
+git rm archivo
+git rm -r directorio (remueve el directorio y los archivos que contiene)
+
+Para ver el historial de archivos:
+git log 
+
+Deshaciendo el cambio local en el directorio de trabajo local:
+
+git checkout -- archivo (solo debe usarse mientras el archivo no se haya
+añadido todavía al área de trabajo temporal)
+
+Ver los repositorios remotos (para saber a dónde se envían los cambios o
+de dónde los descargamos)
+
+git remote
+git remote -v
+
+git remote add origin git@github.com:minombre/archivo-git.git (enlaza el
+repositorio local con un repositorio remoto)
+
+git remote show origin (permite ver la información de los repositorios
+remotos)
+git remote rename origin nombre_nuevo (renombra un repositorio
+remoto)
+
+git remote rm nombre_git (desvincula un repositorio remoto)
+
+git push -u origin master (el primer push en el repositorio debe contener
+su nombre y branch)
+
+git push (los otros pushs no necesitan otras informaciones)
+
+git pull (actualizar los archivos contra la branch actual)
+
+git fetch (obtener los cambios, pero no aplicarlos a la branch actual)
+
+Clonar un repositorio remoto existente
+
+git clone git@github.com:minombre/archivo-git.git
+
+Branches
+
+git branch nuevaBranch_nombre (crea una nueva branch)
+
+git checkout nuevaBranch_nombre (cambia a una branch existente) - En este
+caso, el principal puntero HEAD está apuntando a la branch llamada
+nuevaBranch_nombre.
+
+git checkout master (vuelve a la branch principal-master-)
+
+git merge nuevaBranch_nombre (resuelve la unión (merge) entre las branches) -
+Para realizar la unión (merge), debe estar en la branch que debe recibir los
+cambios.
